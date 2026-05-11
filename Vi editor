@@ -1,0 +1,31 @@
+vim <file-name> -> if file exists it open, if it does not exists it will create and open
+
+colon mode
+==========
+:wq -> write and quit
+:q -> quit, if we haven't done any changes
+:q! -> force quit
+:set nu => display numbers
+:set nonu -> don't display numbers
+:<line-number> -> cursor will move to that line
+:/<word-to-search> -> forward search. press n for next word
+:?<word-to-search> -> backward search.
+:2d -> delete line number 2
+:2,5d -> 2-5 line numbers delete
+:%d -> % referes to everything. delete full content
+:noh -> don't highlight the word
+:4s/<word-to-find>/<word-to-replace> -> in line-number 4, replace the first occurence
+:4s/<word-to-find>/<word-to-replace>/g -> in line-number 4, replace all occurences
+:%s/<word-to-find>/<word-to-replace> -> all line-numbers, first occurence
+:%s/<word-to-find>/<word-to-replace>/g -> all line-numbers, all occurences
+
+Esc mode
+=========
+u -> undo the changes
+ctrl+r -> redo the changes
+shift+g -> bottom of the file
+gg -> top of the file
+yy -> copy the line
+p -> paste the copied line, under the present cursor line
+shift+p -> paste the copied line, above the present cursor line
+10p -> paste 10times
