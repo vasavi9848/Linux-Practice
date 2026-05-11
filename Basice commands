@@ -1,0 +1,114 @@
+command <options> <inputs>
+usage
+
+uname -> system information
+-a -> all system information
+
+/c/devops/daws-90s/repos -> absoulte path
+repos/ -> relative path
+
+CRUD -> Create Read Update Delete
+
+ls -> list subdirectories
+
+My Computer -> Windows Root directory
+
+/ -> root directory
+
+/home -> home directories of linux users
+/etc -> configurations
+/tmp -> temp files
+/bin -> commands or binaries
+
+
+ls -l -> long list detailed format
+ls -lr -> reverse alpha
+ls -ltr -> latest at the bottom
+
+hidden files or directories starts with .
+
+ls -la -> all files including hidden
+
+touch <file-name> -> creates empty file
+cat devops.txt -> read the file
+> -> redirection
+cat > devops.txt -> enter the text -> enter and ctrl+d
+>> -> append 
+
+cat file-1 file-2 > file-3 -> merge file-1 and file-2 into file-3
+
+d -> directory
+- -> file
+
+mkdir -p devops -> if directory does not exist it will create, if exist it will be silent no error
+
+rmdir devops -> removes if the directory is empty
+
+file-select -> ctrl+c -> destination -> ctrl+v
+
+copy
+====
+cp <source> <destination>
+
+rm -r devops -> recursively delete files and directories
+mv -> move the files and rename purpose
+
+How to download files
+===========
+wget <url> -> download the file
+curl <url> -> directly shows on the screen -> scripting and hitting API's
+
+grep command
+============
+find the text inside files
+
+grep <word-to-find> file-name
+
+Linux linux both are different
+
+-i -> case insensitive
+-n -> line number display
+-c -> count number of lines
+-v -> opposite, verbose
+
+grep -v linux file -> not matching linux
+
+piping
+=======
+| -> pipe
+
+curl -s https://raw.githubusercontent.com/daws-90s/notes/refs/heads/main/session-02.txt | grep linux
+
+head and tail commands
+===================
+head -> prints top 10 lines
+tail -> prints bottom 10 lines
+
+cut
+====
+https://raw.githubusercontent.com/daws-90s/notes/refs/heads/main/session-02.txt
+
+ecut -d "/" -f9 
+
+/etc/passwd -> all linux usernames are here
+
+cat /etc/passwd
+cut -d ":" -f1 /etc/passwd
+cut -d ":" -f3 /etc/passwd
+cut -d ":" -f1,3 /etc/passwd
+
+awk command
+===========
+echo https://raw.githubusercontent.com/daws-90s/notes/refs/heads/main/session-02.txt | awk -F "/" '{print $NF}'
+
+awk -F ":" '{print $1F}'
+
+awk -F ":" '$3 > 999 { print $1 }' /etc/passwd
+
+editors -> vim editor
+
+cat >>
+
+commands
+=========
+ls, cat, tac, touch, rm, mkdir, cp, mv, curl, wget, head, tail, grep, cut, awk
